@@ -4,8 +4,6 @@
 #include <iostream>
 #include <fstream>
 #include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
-#include <SFML/System.hpp>
 #include <optional>
 
 
@@ -16,6 +14,7 @@ int main() {
   double theta, omega;
   double PI = 3.141592653589793;
   string buf , buf1 , buf2 ;
+
   // User inputs
   cout << "# Enter omega:\n";
   cin >> omega;
@@ -37,9 +36,12 @@ int main() {
   std::ofstream myfile("circle.dat");
   myfile.precision(17);
 
-  sf::RenderWindow window(sf::VideoMode({800, 600}), "display");
+  // Begin Display Rendering
+  sf::RenderWindow window(sf::VideoMode({800, 600}), "Particle Orbit");
 
   while (window.isOpen()) {
+
+    // necessary code for SFML 3 (not event chatgpt knows how to code this correctly)
     while (const std::optional event = window.pollEvent())
     {
       if (event->is<sf::Event::Closed>())
@@ -53,6 +55,7 @@ int main() {
       }
     }
 
+    // draw the particles
     sf::CircleShape point(1.f);
     point.setFillColor(sf::Color(255,0,0));
     t = t0;
