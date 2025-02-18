@@ -1,0 +1,3 @@
+/Users/declanstanton/Desktop/Personal/physics_modelz/cmake-build-debug/CMakeFiles/ptcl_circle.dir
+/Users/declanstanton/Desktop/Personal/physics_modelz/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/declanstanton/Desktop/Personal/physics_modelz/cmake-build-debug/CMakeFiles/rebuild_cache.dir
